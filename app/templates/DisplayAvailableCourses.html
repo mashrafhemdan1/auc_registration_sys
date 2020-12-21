@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} Courses to take {% endblock %}
+{% block content %}
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Department Code</th>
+        <th>Course Number</th>
+        <th>Course Name</th>
+        <th>Credits</th>
+    </tr>
+    </thead>
+    <thead>
+    <tbody>
+    {% for course in Courses %}
+    <tr>
+        <td>{{course[0]}}</td>
+        <td>{{course[1]}}</td>
+        <td>{{course[2]}}</td>
+        <td>{{course[3]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </thead>
+</table>
+<br>
+{% endblock %}

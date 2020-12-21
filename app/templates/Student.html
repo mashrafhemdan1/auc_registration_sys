@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Student Page {% endblock %}
+{% block content %}
+    Student ID: {{sid}}
+<p>Show all the available courses that you can enroll</p>
+<form action="#" method="post">
+    <p>Semester</p>
+    <p><input type = "text" name = "semester"></p>
+    <p><input type = "submit" value="submit"></p>
+</form>
+    <li><a href="{{ url_for('addReview', sid = sid) }}">Add a new review on a course</a></li>
+    <li><a href="{{ url_for('AddFinishedCourse', sid = sid) }}">Add a new record to your course history</a></li>
+{% endblock %}

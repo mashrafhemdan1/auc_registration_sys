@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %} Administration {% endblock %}
+{% block content %}
+    <li><a href="{{ url_for('Administration') }}">Add a student’s record</a></li>
+    <li><a href="{{ url_for('Administration') }}">Add a record to the student’s course history</a></li>
+{% endblock %}

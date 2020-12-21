@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Course Reviews {% endblock %}
+{% block content %}
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Rating</th>
+        <th>Textual Description</th>
+    </tr>
+    </thead>
+    <thead>
+    <tbody>
+    {% for review in reviews %}
+    <tr>
+        <td>{{review[0]}}</td>
+        <td>{{review[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </thead>
+</table>
+<br>
+{% endblock %}

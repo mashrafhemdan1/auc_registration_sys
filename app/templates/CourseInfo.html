@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Course Information {% endblock %}
+{% block content %}
+<h3>{{DeptCode}} {{CourseNo}}: {{CourseInfo[0][2]}}</h3>
+Number of credits: {{CourseInfo[0][3]}}
+<h4>Description</h4>
+{{CourseInfo[0][4]}}
+<h4>Notes</h4>
+{{CourseInfo[0][5]}}
+<li><a href="{{ url_for('ShowReviews', DeptCode=DeptCode, CourseNo=CourseNo) }}">View existing reviews on a given course</a></li>
+{% endblock %}
